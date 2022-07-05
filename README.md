@@ -28,7 +28,9 @@ feature branch: branch off of main to work on a specific feature
 
 `git branch`: lists branches, the * denotes the current branch
 
-`git checkout -b featurename`: the `checkout` switches to a new branch, the `-b` flag creates a new branch
+`git checkout -b <featurename>`: the `checkout` switches to a new branch, the `-b` flag creates a new branch
+
+`git checkout -b <branch-name> <old-branch-hash>`: switch to an old commit
 
 `git diff`: show what changes were made in this branch
 
