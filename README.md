@@ -54,3 +54,8 @@ feature branch: branch off of main to work on a specific feature
 
 `git reset --hard <hash>`: to remove instead of unstage - to go back to a certain commit
 
+## Other Notes
+
+* head refers to a commit object. HEAD refers to the current head
+* `~` is used to go back a number of generations
+
