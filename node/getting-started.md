@@ -63,7 +63,7 @@ app.listen(process.env.PORT, () => {
 })
 ```
 
-## Use `mongoose` to define schemas (object data modeling`)
+## Use `mongoose` to define schemas
 
 Permitted data types:
 - String

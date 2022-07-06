@@ -180,7 +180,7 @@ function User() {
     )
 }
 ```
-<p class="codeblock-label">User.js</p>
+<p class="caption">User.js</p>
 
 ```javascript
 import { AppContext } from './ContextTutorial'
