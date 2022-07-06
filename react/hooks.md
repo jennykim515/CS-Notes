@@ -1,3 +1,4 @@
+# React Hooks
 1. `useReducer()`
 - used to reduce the number of calls to `useState()`
 - combine multiple states into one statement

@@ -1,4 +1,6 @@
-# Quick Links
+# Quick Info
+
+### Links
 [Add gradient background](https://angrytools.com/gradient/)
 
 
