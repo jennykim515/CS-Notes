@@ -62,3 +62,58 @@ app.listen(process.env.PORT, () => {
     console.log("App is listening on port", process.env.PORT)
 })
 ```
+
+## Use `mongoose` to define schemas (object data modeling`)
+
+Permitted data types:
+- String
+- Number
+- Date
+- Buffer
+- Boolean
+- Mixed
+- ObjectId
+- Array
+- Decimal128
+- Map
+
+Define a schema:
+```javascript
+import mongoose from 'mongoose'
+const { Schema, model } = mongoose
+
+const blog = new Schema({
+  title: String,
+  slug: String,
+  published: Boolean,
+  author: String,
+  content: String,
+  tags: [String],
+  createdAt: Date,
+  updatedAt: Date,
+  comments: [{
+    user: String,
+    content: String,
+    votes: Number
+  }]
+});
+```
+
+Define a model to take on the schema
+```javascript
+const Blog = mongoose.model('Blog', blog);
+export default Blog
+```
+
+Connect to MongoDB
+```javascript
+import mongoose from 'mongoose'
+mongoose.connect("mongodb+srv://<username>:<password>@cluster0.eyhty.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+```
+
+## ES Module vs Common JS
+- To use ES modules, need to define `"type": "module"` inside `package.json`
+- CommonJS loads modules synchronously
+  - `require()` loads modules synchronously, so they are loaded and processed one by one
+- ES modules are asynchronous
+  - use `import` instead of `require()`
