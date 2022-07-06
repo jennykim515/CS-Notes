@@ -18,11 +18,11 @@ npm i <package-name>
 
 ## Popular Packages
 1. express
-2. dotenv: loads environment variables
+2. dotenv
 3. mongoose
 4. nodemon
 
-## Using `dotenv` for environment variables
+## Use `dotenv` for environment variables
 
 Create a file named `.env` and put constants inside
 
