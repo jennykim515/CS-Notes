@@ -32,9 +32,11 @@ const reducer = (state, action) => {
 
 2. `useEffect()`
 - specify when the page should render
-- changing a state will re-render the page, so `useEffect()` will re-render each time state is changed
-- takes an argument of what state to keep track of
-  - an array of states that will trigger a re-render
+- changing a state will re-render the page, so `useEffect()` will re-render each time a state is changed
+- takes an optional argument of what state to keep track of
+  - an array of which states will trigger a re-render
+  - empty array means page will only render once 
+  - no argument means every state change will re-render the page
   
 ```javascript
 
@@ -54,3 +56,15 @@ function EffectTutorial() {
     return <div>Hello World {data[0].email}</div>
 }
 ```
+
+1. `useState()`
+- manage states to avoid javascript's usual `document.querySelector()` to render something new on the page
+
+```javascript
+import {useState} from 'react'
+
+// inside a function
+const [state, setState] = useState('initial state')
+```
+
+4. `useRef()`
